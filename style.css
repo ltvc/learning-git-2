@@ -20,4 +20,6 @@ font-size:24px;}
 a:link {
 color: #00008B;}
 a:hover {
-    color: red;
+color: red;}
+a:active {
+color: blue;}
