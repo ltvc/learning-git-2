@@ -14,12 +14,11 @@
 	"build:clean": "rimraf /learning-git-2/css/*",
     "build:sass": "node-sass --output-style compact -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
-    "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch": "npm-run-all build -p watch:*",
 	"watch:browsersync": "browser-sync start --server --files \"css/*.css\" \"*.html\"",
 	"watch:sassprefixer": "onchange sass/*.scss -- npm-run-all sasspre:*",
     "sasspre:watchsass": "node-sass --output-style expanded --source-map true -o css sass",
-    "sasspre:autoprefixer": "npm-run-all build:sass build:autoprefixer"
+    "sasspre:autoprefixer": "build:autoprefixer"
 
   },
   "repository": {
